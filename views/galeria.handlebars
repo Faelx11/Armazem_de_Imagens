@@ -1,0 +1,17 @@
+<h1 class="text-black">Galeria de Imagens</h1>
+{{#if images}}
+    {{#if images.length}}
+        <div class="gallery">
+            {{#each images}}
+                <div class="image-container">
+                    <img src="{{this.url}}" alt="{{this.name}}" class="img">
+                    <span class="image-name">{{this.name}}</span>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        <p>Nenhuma imagem encontrada.</p>
+    {{/if}}
+{{else}}
+    <p>Nenhuma imagem encontrada.</p>
+{{/if}}
